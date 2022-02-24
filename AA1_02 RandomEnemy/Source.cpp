@@ -1,8 +1,20 @@
 #include <iostream>
+#include <cstring>
+#include <cstdio>
+#include <cstdlib>
 #include "Header.h"
+
 using namespace std;
+
 #define MAX_ENEMIES 5;
 
+enum EnemyType {ZOMBIE, VAMPIRE, GHOST, WITCH};
+
+struct Enemy {
+	EnemyType type;
+	char Name[10];
+	int health;
+};
 
 int main() {
 	Enemy enemies[MAX_ENEMIES];
@@ -17,14 +29,7 @@ int main() {
 		cout << enemies[f] << "\n";
 		f++;
 	}
-}
-
-enum EnemyType {ZOMBIE, VAMPIRE, GHOST, WITCH};
-
-struct Enemy {
-	EnemyType type;
-	char Name[10];
-	int health;
+	return 0;
 }
 
 string getEnemyString{
@@ -50,11 +55,12 @@ bool EqualEnemies(Enemy enemy1, Enemy enemy2) {
 				Comapare = true;
 		}
 	}
-	return Comapre
+	return Comapre;
 }
 
 Enemy createRandomEnemy() {
-	Enemy::type = rand() % 4;
-	Enemy::health = rand() % 1000;
-	return Enemy;
+	Enemy enemy1;
+	enemy1::type = rand() % 4;
+	enemy1::health = rand() % 1000;
+	return enemy1;
 }
