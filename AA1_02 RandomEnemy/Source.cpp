@@ -18,13 +18,12 @@ int main() {
 		f++;
 	}
 }
-#include <iostream>
 
 enum EnemyType {ZOMBIE, VAMPIRE, GHOST, WITCH};
 
 struct Enemy {
 	EnemyType type;
-	char enemyName[10];
+	char Name[10];
 	int health;
 }
 
@@ -39,7 +38,20 @@ string getEnemyString{
 		return "witch";
 }
 
-
+bool EqualEnemies(Enemy enemy1, Enemy enemy2) {
+	bool Compare = false;
+	if (enemy1::type == enemy2::type) {
+		for (i = 0; i < 10; i++) {
+			if (!(enemy1::name[i] == enemy2::name[i])) {
+				Compare = false;
+				break;
+			}
+			else
+				Comapare = true;
+		}
+	}
+	return Comapre
+}
 
 Enemy createRandomEnemy() {
 	Enemy::type = rand() % 4;
