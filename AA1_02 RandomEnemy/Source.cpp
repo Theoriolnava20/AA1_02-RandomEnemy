@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 #include <cstdio>
-#include <cstdlib>
 #include "Header.h"
 
 using namespace std;
@@ -18,7 +17,7 @@ struct Enemy {
 
 int main() {
 	Enemy enemies[MAX_ENEMIES];
-	for (int i = 0; i < MAX_ENEMIES) {
+	for (int i = 0; i < MAX_ENEMIES;i++) {
 		enemies[i] = createRandomEnemy();
 		if (equalenemies() == true)
 			enemies[i] = createRandomEnemy;
